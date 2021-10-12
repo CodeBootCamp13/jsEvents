@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Events</title>
+
+	<style>
+		h1 { background-color: #999; }
+	</style>
+
+	<script>
+
+		// onload = the page has loaded
+		// onmouseover = you have moved your mouse over an element
+		// onmouseout = you have moved your mouse out of an element
+		// onsubmit = you have submitted the form
+		// onfocus = you are looking at an HTML input
+		// onblur = you have left an HTML input
+
+		function clickHandler() {
+			alert('hello. you clicked me');
+			return true;
+		}
+
+		function mouseOver() {
+			document.getElementById('eventLog').innerHTML = 'mouse over';
+		}
+
+		function mouseOut() {
+			document.getElementById('eventLog').innerHTML = 'mouse out';
+		}
+
+		function checkForm() {
+
+			if ( document.getElementById('userName').value == 'eric' ) {
+				alert('form is good');
+				return true;
+			}
+
+			document.getElementById('eventLog').innerHTML = 'Form submit stopped';
+			return false;
+		}
+
+		function onBlur() {
+			document.getElementById('eventLog').innerHTML = 'Left (blurred) the input';
+		}
+
+		function onFocus() {
+			document.getElementById('eventLog').innerHTML = 'Entered (focus) the input';
+		}
+
+	</script>
+</head>
+<body onload="">
+	
+	<h1 onclick="clickHandler();" onmouseover="mouseOver();" onmouseout="mouseOut();">JS Events</h1>
+
+	<div id="eventLog"></div>
+
+	<button onclick="clickHandler();">Click Me!</button>
+	<hr>
+
+	<form action="/form.html" method="GET" onsubmit="return checkForm();">
+		<input type="text" id="userName" name="name" onblur="onBlur();" onfocus="onFocus();">
+		<input type="submit" value="Submit">
+	</form>
+
+</body>
+</html>

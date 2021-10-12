@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Events</title>
+
+	<style>
+		h1 { background-color: #999; }
+
+		#container { display: flex; gap: 20px; }
+
+		.box { background-color: #999; border: 1px solid #000; height: 200px; width: 200px; }
+	</style>
+
+
+	<script src="https://d3js.org/d3.v7.min.js" defer></script>
+	<script src="/js/jsevents.js" defer></script>
+</head>
+<body onload="">
+	
+	<h1>JS Events</h1>
+
+	<p>Something for d3?</p>
+
+	<a id="myLink" href="/index.html">CLICK ME FOR A SECRET</a>
+
+	<div id="eventLog"></div>
+
+	<button id="button"><strong>Click</strong> Me!</button>
+	<hr>
+
+	<div id="container">
+		<div id="box1" class="box"><h2>Box 1</h2></div>
+		<div id="box2" class="box"><h2>Box 2</h2></div>
+		<div id="box3" class="box"><h2>Box 3</h2></div>
+	</div>
+
+
+	<hr>
+
+	<form action="/form.html" id="myForm" method="GET">
+		<input type="text" id="userName" name="name" onblur="" onfocus="" autocomplete="off">
+		<br>
+		<input type="text" id="lastName" name="lastName" onblur="" onfocus="" autocomplete="off">
+		<br>
+		<input type="email" id="emailAddress" name="email" onblur="" onfocus="" autocomplete="off">
+
+		<label>Blue</label>
+		<input type="radio" id="radio_1" name="radioChoice" value="Blue">
+		<label>Green</label>
+		<input type="radio" id="radio_2" name="radioChoice" value="Green">
+		<label>Red</label>
+		<input type="radio" id="radio_3" name="radioChoice" value="Red">
+
+		<input type="submit" value="Submit">
+	</form>
+
+</body>
+</html>
